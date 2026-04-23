@@ -56,7 +56,7 @@ const StudentLogin = () => {
             setUserDistance(distance);
 
             // Check if the distance is within 20 meters
-            setIsWithinRange(distance <= 20);
+            setIsWithinRange(distance <= 1000);
           },
           (error) => {
             toast.error(`Error getting user location., ${error.message}`);
@@ -202,7 +202,7 @@ const StudentLogin = () => {
             </button>
           ) : (
             <p className="text-xs text-red-500 pt-2">
-              You must be within 20 meters of the lecture venue to register.
+              You must be within 1000 meters of the lecture venue to register.
             </p>
           )}
         </form>
